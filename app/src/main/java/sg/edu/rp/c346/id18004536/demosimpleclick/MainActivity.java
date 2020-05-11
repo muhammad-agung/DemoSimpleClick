@@ -30,17 +30,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Code for the action
-                eInput.getText().toString();
                 String stringResponse = eInput.getText().toString();
                 tvDisplay.setText(stringResponse);
             }
         });
 
 
+
         tbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                eInput.setEnabled(false);
+                //Code for the action
+                if(tbtn.isChecked()){
+                    eInput.setEnabled(true);
+                }
+                else{
+                    eInput.setEnabled(false);
+                }
             }
         });
     }
